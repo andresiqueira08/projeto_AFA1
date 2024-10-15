@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form id="registerForm">
+        <h1>Crie Sua Conta</h1>
+        <input type="text" id="username" placeholder="Nome de Usuário" required>
+        <input type="text" id="firstname" placeholder="Nome" required>
+        <input type="text" id="lastname" placeholder="Sobrenome" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+        <input type="tel" id="phone" placeholder="Telefone (opcional)">
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Li e estou de acordo com o <a href="#">Termo de Uso</a> e <a href="#">Política de Privacidade</a></label>
+        </div>
+        <button type="submit">Criar</button>
+    </form>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert("As senhas não coincidem!");
+                return;
+            }
+
+            // Armazenar os dados do usuário no localStorage
+            localStorage.setItem('username', username);  // Armazena o nome de usuário
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
+
+
+

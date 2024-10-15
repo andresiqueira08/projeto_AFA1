@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Painel de Atividades</title> 
+</head>
+<body>
+    <div class="modules">
+        <div class="module">
+            <h2><a href="atividade-iniciacao.html">Fase 1 - Iniciação</a></h2>
+        </div>
+        <div class="module">
+            <h2><a href="atividade-aprendizagem.html">Fase 2 - Aprendizagem</a></h2>
+        <div class="module">
+            <h2><a href="atividade-fluencia.html">Fase 3 - Fluência</a></h2>
+        </div>
+    </div>
+    <a href="index.html" id="logout">Sair</a>
+
+    <script>
+        // Verificar se o usuário está logado
+        if (!localStorage.getItem('email') || !localStorage.getItem('password')) {
+            alert('Por favor, faça login para acessar o painel.');
+            window.location.href = 'index.html';
+        }
+
+        // Logout
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

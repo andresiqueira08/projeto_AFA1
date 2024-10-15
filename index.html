@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="André Siqueira">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <form id="loginForm">
+        <h1>Seja Bem-Vindo ao AFA</h1>
+        <p>Sua jornada começa agora. Crie sua conta ou faça login para acessar todas as funcionalidades e aproveitar ao máximo.</p>
+        <input type="text" id="loginIdentifier" placeholder="Usuário ou E-mail" required>
+        <input type="password" id="loginPassword" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <p>Não tem uma conta? <a href="register.html">Criar Conta</a></p>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const identifier = document.getElementById('loginIdentifier').value; // Pode ser usuário ou email
+            const password = document.getElementById('loginPassword').value;
+
+            const storedUsername = localStorage.getItem('username');
+            const storedEmail = localStorage.getItem('email');
+            const storedPassword = localStorage.getItem('password');
+
+            // Verificar se o usuário ou e-mail e senha estão corretos
+            if ((identifier === storedUsername || identifier === storedEmail) && password === storedPassword) {
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Usuário/E-mail ou senha incorretos!');
+            }
+        });
+    </script>
+</body>
+</html>
+

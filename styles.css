@@ -1,0 +1,85 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff007f, #ffae00); /* Fundo gradiente */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo dos títulos */
+h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Estilos para formulário */
+form {
+    background-color: #ff007f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    background-color: #ffae00;
+    color: black;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffae00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8800;
+}
+
+/* Links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Checkboxes e outros elementos */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+h2{
+    color: white;
+}
+.upload-box {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+}
