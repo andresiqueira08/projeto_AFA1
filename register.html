@@ -20,32 +20,20 @@
             <input type="checkbox" id="terms" required>
             <label for="terms">Li e estou de acordo com o <a href="#">Termo de Uso</a> e <a href="#">Política de Privacidade</a></label>
         </div>
-        <button type="submit">Criar</button>
+        <button type="submit"><a href="index.html">Criar</a></button>
     </form>
 
     <script>
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert("As senhas não coincidem!");
-                return;
-            }
-
-            // Armazenar os dados do usuário no localStorage
-            localStorage.setItem('username', username);  // Armazena o nome de usuário
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', password);
-
-            alert('Cadastro realizado com sucesso!');
-            window.location.href = 'index.html';
+        // Manipular o envio do formulário de cadastro
+        document.getElementById('signUpForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+      
+          signUpUser(name, email, password);
         });
-    </script>
+      </script>
 </body>
 </html>
 

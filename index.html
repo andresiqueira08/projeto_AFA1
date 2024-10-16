@@ -13,29 +13,20 @@
         <p>Sua jornada começa agora. Crie sua conta ou faça login para acessar todas as funcionalidades e aproveitar ao máximo.</p>
         <input type="text" id="loginIdentifier" placeholder="Usuário ou E-mail" required>
         <input type="password" id="loginPassword" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
+        <button type="submit"><a href="dashboard.html">Entrar</a></button>
         <p>Não tem uma conta? <a href="register.html">Criar Conta</a></p>
     </form>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const identifier = document.getElementById('loginIdentifier').value; // Pode ser usuário ou email
-            const password = document.getElementById('loginPassword').value;
-
-            const storedUsername = localStorage.getItem('username');
-            const storedEmail = localStorage.getItem('email');
-            const storedPassword = localStorage.getItem('password');
-
-            // Verificar se o usuário ou e-mail e senha estão corretos
-            if ((identifier === storedUsername || identifier === storedEmail) && password === storedPassword) {
-                window.location.href = 'dashboard.html';
-            } else {
-                alert('Usuário/E-mail ou senha incorretos!');
-            }
+        // Manipular o envio do formulário de login
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('loginEmail').value;
+          const password = document.getElementById('loginPassword').value;
+      
+          loginUser(email, password);
         });
-    </script>
+      </script>
 </body>
 </html>
 
