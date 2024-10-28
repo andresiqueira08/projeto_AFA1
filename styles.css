@@ -83,3 +83,40 @@ h2{
     color: white;
     display: inline-block;
 }
+
+
+.modules h2{
+    padding: 40px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 30px 30px 30px 30px;
+}
+.module-1 {
+    background-image: url('Opera_Instantaneo_2024-10-28_153914_www.canva.com-ai-brush-removebg-5917rtu.webp');
+    background-size: 118px; /* Define a altura da imagem em 20px */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: 90% center; /* Posiciona a imagem levemente à direita, dentro das bordas */
+}
+.module-3 {
+    background-image: url('Opera_Instantaneo_2024-10-28_153914_www.canva.com-ai-brush-removebg-5917rtu.webp');
+    background-size: 118px; /* Define a altura da imagem em 20px */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: 90% center; /* Posiciona a imagem levemente à direita, dentro das bordas */
+}
+
+
+.premium{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+#logout {
+    position: absolute;
+    bottom: 20px; /* Ajuste este valor para mudar a distância do rodapé */
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+

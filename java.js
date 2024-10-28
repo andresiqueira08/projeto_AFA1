@@ -39,15 +39,4 @@ function signUpUser(name, email, password) {
         console.error("Erro ao criar usuário: ", error);
       });
   }
-  // Função de login
-function loginUser(email, password) {
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Salvando sessão no localStorage
-        localStorage.setItem("user", JSON.stringify(userCredential.user));
-        console.log("Login realizado com sucesso.");
-      })
-      .catch((error) => {
-        console.error("Erro de login: ", error);
-      });
-  }
+  
